@@ -1,6 +1,6 @@
 export interface IBalance {
   address: string;
-  balance: number;
+  balance: string;
 }
 
 export enum EtherUnit {

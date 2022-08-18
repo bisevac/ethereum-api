@@ -46,30 +46,38 @@ describe('EtherScanService', () => {
   it('unitConverter - Ether Unit Converter', () => {
     expect(
       service.unitConverter(
-        22277171931976772258,
+        '22277171931976772258',
         EtherUnit.Wei,
         EtherUnit.Ether,
       ),
-    ).toBe(22.277171931976772258);
+    ).toBe('22.277171931976772258');
 
     expect(
       service.unitConverter(
-        22.277171931976772258,
+        '22.277171931976772258',
         EtherUnit.Ether,
         EtherUnit.Wei,
       ),
-    ).toBe(22277171931976772258);
+    ).toBe('22277171931976772258');
 
-    expect(service.unitConverter(1005, EtherUnit.GWei, EtherUnit.Wei)).toBe(
-      1005000000000,
+    expect(service.unitConverter('1005', EtherUnit.GWei, EtherUnit.Wei)).toBe(
+      '1005000000000',
     );
 
     expect(
-      service.unitConverter(551235.7, EtherUnit.Szabo, EtherUnit.GEther),
-    ).toBe(0.0000000005512357);
+      service.unitConverter(
+        '14579126532765795482',
+        EtherUnit.Wei,
+        EtherUnit.Ether,
+      ),
+    ).toBe('14.579126532765795482');
 
-    expect(service.unitConverter(0, EtherUnit.Finney, EtherUnit.KEther)).toBe(
-      0,
+    expect(
+      service.unitConverter('16653551235.7', EtherUnit.Szabo, EtherUnit.GEther),
+    ).toBe('0.0000166535512357');
+
+    expect(service.unitConverter('0', EtherUnit.Finney, EtherUnit.KEther)).toBe(
+      '0',
     );
   });
 });

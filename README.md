@@ -74,7 +74,7 @@ class RequestDTO {
 class DataDTO {
   address : string;
   valid   : boolean;
-  balance : number;
+  balance : string;
 }
 
 @returns ApiResponse<DataDTO[]>
@@ -97,12 +97,12 @@ $ curl --location --request POST 'http://localhost:3000/ethereum/balance' \
     "data": [
         {
             "valid": true,
-            "balance": 3.9837970079550002,
+            "balance": "20.629299847893621541",
             "address": "0xB7e390864a90b7b923C9f9310C6F98aafE43F707"
         },
         {
             "valid": true,
-            "balance": 332.56713622282706,
+            "balance": "332.567136222827062478",
             "address": "0x63a9975ba31b0b9626b34300f7f627147df1f526"
         },
         {
@@ -116,7 +116,7 @@ $ curl --location --request POST 'http://localhost:3000/ethereum/balance' \
             "address": "0xC1912fEE45d61C87Cc5EA59DaE31190FFFFf232d"
         }
     ],
-    "timestamp": "2022-08-18T12:57:15.331Z"
+    "timestamp": "2022-08-18T22:09:51.886Z"
 }
 ```
 
