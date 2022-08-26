@@ -12,4 +12,5 @@ export class GetBalancesReponseDTO implements IBalance {
   address: string;
   valid = true;
   balance: string = null;
+  usdBalance: number = null;
 }
