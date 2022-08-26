@@ -72,9 +72,10 @@ class RequestDTO {
 }
 
 class DataDTO {
-  address : string;
-  valid   : boolean;
-  balance : string;
+  address    : string;
+  valid      : boolean;
+  balance    : string;
+  usdBalance : number
 }
 
 @returns ApiResponse<DataDTO[]>
@@ -97,26 +98,30 @@ $ curl --location --request POST 'http://localhost:3000/ethereum/balance' \
     "data": [
         {
             "valid": true,
-            "balance": "20.629299847893621541",
+            "balance": "10.130901404127232515",
+            "usdBalance": 16755.801759328155,
             "address": "0xB7e390864a90b7b923C9f9310C6F98aafE43F707"
         },
         {
             "valid": true,
             "balance": "332.567136222827062478",
+            "usdBalance": 550042.7636130204,
             "address": "0x63a9975ba31b0b9626b34300f7f627147df1f526"
         },
         {
             "valid": false,
             "balance": null,
+            "usdBalance": null,
             "address": "2tB7e390864a90b7b923C9f9310C6F98aafE43F707"
         },
         {
             "valid": false,
             "balance": null,
+            "usdBalance": null,
             "address": "0xC1912fEE45d61C87Cc5EA59DaE31190FFFFf232d"
         }
     ],
-    "timestamp": "2022-08-18T22:09:51.886Z"
+    "timestamp": "2022-08-26T12:48:05.264Z"
 }
 ```
 
